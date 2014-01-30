@@ -5,8 +5,8 @@ module Spree
       class PayoneDebitPaymentPaymentSource < ActiveRecord::Base
         has_many :payments, :as => :source
         
-        attr_accessible :first_name, :last_name, :bank_country, :bank_account,
-                        :bank_code, :bank_account_holder
+        #attr_accessible :first_name, :last_name, :bank_country, :bank_account,
+                        #:bank_code, :bank_account_holder
         
         # Lists available actions.
         def actions

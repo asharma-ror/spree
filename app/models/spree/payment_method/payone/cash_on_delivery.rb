@@ -9,7 +9,7 @@ module Spree
     preference :shipping_provider, :string, :default => 'DHL'
     
     # Preferences accessors
-    attr_accessible :preferred_shipping_provider
+    #attr_accessible :preferred_shipping_provider
     
     # Returns provider class responsible for Spree payment method action implementations.
     def provider_class

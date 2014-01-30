@@ -1,7 +1,7 @@
 module Spree
   Order.class_eval do
     attr_accessor :redirect_required
-    attr_accessible :blocked_payment_method_types
+    #attr_accessible :blocked_payment_method_types
     
     def blocked_payment_method_types_array
       blocked_payment_method_types.to_s.split(/,/)

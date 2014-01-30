@@ -16,14 +16,14 @@ module Spree
     preference :credit_card_types, :string, :default => 'V'
     
     # Preferences accessors
-    attr_accessible :preferred_use_global_account_settings
-    attr_accessible :preferred_merchant_id
-    attr_accessible :preferred_payment_portal_id
-    attr_accessible :preferred_payment_portal_key
-    attr_accessible :preferred_sub_account_id
-    attr_accessible :preferred_test_mode
-    attr_accessible :preferred_currency_code
-    attr_accessible :preferred_credit_card_types
+    #attr_accessible :preferred_use_global_account_settings
+    #attr_accessible :preferred_merchant_id
+    #attr_accessible :preferred_payment_portal_id
+    #attr_accessible :preferred_payment_portal_key
+    #attr_accessible :preferred_sub_account_id
+    #attr_accessible :preferred_test_mode
+    #attr_accessible :preferred_currency_code
+    #attr_accessible :preferred_credit_card_types
     
     # Returns provider class responsible for Spree gateway action implementations.
     def provider_class

@@ -9,7 +9,7 @@ module Spree
     preference :wallet_type, :string, :default => 'PPE'
     
     # Preferences accessors
-    attr_accessible :preferred_wallet_type
+    #attr_accessible :preferred_wallet_type
     
     # Returns true if confirmation needed before processing the payment.
     def payment_confirmation_required?

@@ -9,7 +9,7 @@ module Spree
     preference :online_bank_transfer_types, :string, :default => 'PNT'
     
     # Preferences accessors
-    attr_accessible :preferred_online_bank_transfer_types
+    #attr_accessible :preferred_online_bank_transfer_types
     
     # Returns true if confirmation needed before processing the payment.
     def payment_confirmation_required?

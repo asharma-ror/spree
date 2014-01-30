@@ -5,7 +5,7 @@ module Spree
       class PayoneInvoicePaymentSource < ActiveRecord::Base
         has_many :payments, :as => :source
         
-        attr_accessible :first_name, :last_name
+        #attr_accessible :first_name, :last_name
         
         # Lists available actions.
         def actions

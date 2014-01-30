@@ -1,6 +1,6 @@
 module Spree
   CreditCard.class_eval do
-    attr_accessible :cc_type, :card_holder
+    #attr_accessible :cc_type, :card_holder
     
     # Returns card holder.
     def card_holder

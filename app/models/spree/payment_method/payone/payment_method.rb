@@ -16,13 +16,13 @@ module Spree
     preference :currency_code, :string, :default => 'EUR'
     
     # Preferences accessors
-    attr_accessible :preferred_use_global_account_settings
-    attr_accessible :preferred_merchant_id
-    attr_accessible :preferred_payment_portal_id
-    attr_accessible :preferred_payment_portal_key
-    attr_accessible :preferred_sub_account_id
-    attr_accessible :preferred_test_mode
-    attr_accessible :preferred_currency_code
+    #attr_accessible :preferred_use_global_account_settings
+    #attr_accessible :preferred_merchant_id
+    #attr_accessible :preferred_payment_portal_id
+    #attr_accessible :preferred_payment_portal_key
+    #attr_accessible :preferred_sub_account_id
+    #attr_accessible :preferred_test_mode
+    #attr_accessible :preferred_currency_code
     
     # Instantiates the selected payment method and configures with the options stored in the database.
     def self.current

@@ -5,6 +5,6 @@ module Spree
     # for details see: state_machine documentation
     establish_connection Rails.env.to_sym
     
-    attr_accessible :level, :message
+    #attr_accessible :level, :message
   end
 end
