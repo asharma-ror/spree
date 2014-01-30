@@ -28,21 +28,21 @@ module Spree
     
     Order.state_machines[:state].events[:next].reset
     Order.state_machines[:state].event :next do
-      transition :from => :cart,     :to => :address
-      transition :from => :address,  :to => :delivery
-      transition :from => :delivery, :to => :payment, :if => :payment_required?
-      transition :from => :delivery, :to => :complete
-      transition :from => :confirm,  :to => :complete
+      transition :from => "cart",     :to => "address"
+      transition :from => "address",  :to => "delivery"
+      transition :from => "delivery", :to => "payment", :if => :payment_required?
+      transition :from => "delivery", :to => "complete"
+      transition :from => "confirm",  :to => "complete"
 
       # Note: some payment methods will not support a confirm step
-      transition :from => :payment,  :to => :confirm,
+      transition :from => "payment",  :to => "confirm",
                                      :if => Proc.new { |order| order.payment_method && order.payment_method.payment_profiles_supported? }
-      transition :from => :payment,  :to => :confirm,
+      transition :from => "payment",  :to => "confirm",
                                      :if => Proc.new { |order| order.payment_method && order.payment_method.respond_to?(:payment_confirmation_required?) && order.payment_method.payment_confirmation_required? }
 
-      transition :from => :payment,  :to => :complete
+      transition :from => "payment",  :to => "complete"
       
-      transition :from => :complete,  :to => :payment_redirect
+      transition :from => "complete",  :to => "payment_redirect"
       # This action must be performed manualy while we don't want to process payment once again
       # transition :from => :payment_redirect,  :to => :complete
     end
